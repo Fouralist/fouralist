@@ -4,6 +4,7 @@ package bootstrap
 import (
 	"github.com/sev-2/raiden"
 	"medpoint/internal/controllers"
+	"medpoint/internal/models"
 	"github.com/valyala/fasthttp"
 )
 
@@ -14,6 +15,13 @@ func RegisterRoute(server *raiden.Server) {
 			Path:       "/rest/v1/medpointdoctor?select=*&id=eq.1",
 			Methods:    []string{fasthttp.MethodGet},
 			Controller: &controllers.HelloWordController{},
+		},
+		{
+			Type:       raiden.RouteTypeRest,
+			Path:       "/rest/v1/medpointdoctor",
+			Methods:    []string{},
+			Controller: &controllers.BooksController{},
+			Model:      models.MedpointDoctor{},
 		},
 	})
 }

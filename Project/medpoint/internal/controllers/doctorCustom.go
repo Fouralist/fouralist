@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"medpoint/internal/models"
 
 	"github.com/sev-2/raiden"
@@ -28,16 +27,18 @@ func (c *HelloWordController) Get(ctx raiden.Context) error {
 	db.
 		NewQuery(ctx).
 		From(models.MedpointDoctor{}).
-		Select([]string{"id", "name", "isbn"}).
-		Eq("isbn", "9786235266008").
-		Get()
+		// Select([]string{"id", "name_doctor"}).
+		Eq("id", 1).
+		Single()
 	// SQL: select id, name, isbn from books where isbn = '9786235266008'
-	// URL: /rest/v1/books?select=id,name,isbn&isbn=9786235266008
+	// URL: /rest/v1/books?select=id,name_doctor&id=eq.1
 
-	fmt.Println(books)
-	fmt.Println(books[0].Id)
-	fmt.Println(books[0].Name)
-	fmt.Println(books[0].Isbn)
+	// fmt.Println(medpoint_doctor)
+	// fmt.Println(medpoint_doctor[0].Id)
+	// fmt.Println(medpoint_doctor[0].Id_Occupation)
+	// fmt.Println(medpoint_doctor[0].Occupation_Doctor)
+	// fmt.Println(medpoint_doctor[0].Name_Doctor)
+	// fmt.Println(medpoint_doctor[0].Contact_Doctor)
 
-	return ctx.SendJson(books)
+	return ctx.SendJson(medpoint_doctor)
 }
