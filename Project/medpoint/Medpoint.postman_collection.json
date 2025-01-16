@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "f38751fa-cdd5-4cf6-a6b0-b27130472b55",
+		"name": "Medpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18702530"
+	},
+	"item": [
+		{
+			"name": "Medpoint_Doctor",
+			"item": [
+				{
+					"name": "medpoint_doctor list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpoint_doctor",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"rest",
+								"v1",
+								"medpoint_doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medpoint_doctor create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_occupation\": 3, \n    \"occupation_doctor\": \"Nefrologist\",\n    \"name_doctor\": \"Dr. Sima\",\n    \"contact_doctor\": \"08546768067\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpoint_doctor",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"rest",
+								"v1",
+								"medpoint_doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medpointById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpointdoctor?select=*&id=eq.4",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"",
+								"rest",
+								"v1",
+								"medpointdoctor"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "*"
+								},
+								{
+									"key": "id",
+									"value": "eq.4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MedpointDeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpointdoctor?select=*&id=eq.5",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"",
+								"rest",
+								"v1",
+								"medpointdoctor"
+							],
+							"query": [
+								{
+									"key": "select",
+									"value": "*"
+								},
+								{
+									"key": "id",
+									"value": "eq.5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medpoint Doctor Occupation",
+			"item": [
+				{
+					"name": "medpoint_doctor_occupation list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpoint_doctoroccupation",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"rest",
+								"v1",
+								"medpoint_doctoroccupation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medpoint_doctor_occupation create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"specialist\": \"Anak\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpoint_doctoroccupation",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"rest",
+								"v1",
+								"medpoint_doctoroccupation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medpoint Doctor  Schedule",
+			"item": [
+				{
+					"name": "medpoint_doctor_schedule list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpoint_doctorschedule",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"rest",
+								"v1",
+								"medpoint_doctorschedule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "medpoint_doctor_schedule create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "apikey",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9rZmlpYW1xZmd4Z3V0c3lyZHV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzYzMjY3MjAsImV4cCI6MjA1MTkwMjcyMH0.cloETRUCZ9TRgy5UqBCA8ToGR0hOXBDuU5nQSEcvQRU",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doctor_id\": 1, \n    \"doctor_name\": \"Dr. Amika\",\n    \"dayschedule\": \"Monday\",\n    \"time_schedule\": \"At 10PM\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8002/rest/v1/medpoint_doctorschedule",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8002",
+							"path": [
+								"rest",
+								"v1",
+								"medpoint_doctorschedule"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
